@@ -1,0 +1,7 @@
+<div>
+	<h2>Welcome to <%= @library.name %></h2>
+	<p>Floors: <%= @library.floor_count%></p>
+	<p>Floor Area: <%= @library.floor_area%></p>
+	<div style="display: inline-block"><%= button_to 'Edit', edit_library_path(@library), method: :get %></div>
+	<div style="display: inline-block"><%= button_to 'Delete', destroy_library_path(@library), method: :delete %></div>
+</div>

@@ -1,0 +1,19 @@
+<h1>All Libraries:</h1>
+<% @libraries.each do |library| %>
+  <div>
+    <h3><%= library.name %></h3>
+	<div style="display: inline-block">
+		<%= button_to "View Library", library, method: :get %>
+	</div>
+	<div style="display: inline-block">
+		<% if @current_user %>
+	      <%= button_to "Join", library_users_path(library) %>
+	    <% end %>
+	 </div>
+  </div>
+<% end %>
+<br>
+<br>
+<form action="../libraries/new">
+    <input type="submit" value="Add New Library">
+</form>

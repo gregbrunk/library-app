@@ -1,0 +1,12 @@
+<%= form_for @library do |f| %>
+  <div>
+    <p>Edit Name:</p><%= f.text_field :name %>
+  </div>
+  <div>
+    <p>Edit Floor Count:</p><%= f.number_field :floor_count %>
+  </div>
+  <div>
+    <p>Edit Floor Area:</p><%= f.number_field :floor_area %>
+  </div>
+  <%= f.submit "Update Library" %>
+<% end %>

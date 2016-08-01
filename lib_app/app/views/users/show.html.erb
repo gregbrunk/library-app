@@ -1,3 +1,6 @@
 <div>
 	<p>Welcome, <%= @user.first_name %></p>
+	<div style="display: inline-block"><%= button_to 'View My Libraries', user_libraries_path(@user), method: :get %></div>
+	<div style="display: inline-block"><%= button_to 'Join More Libraries', libraries_path, method: :get %></div>
+	<div style="display: inline-block"><%= button_to 'Logout', logout_path, method: :delete %></div>
 </div>

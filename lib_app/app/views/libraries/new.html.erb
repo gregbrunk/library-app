@@ -1,0 +1,12 @@
+<%= form_for @library do |f| %>
+  <div>
+    <p>Library Name:</p><%= f.text_field :name %>
+  </div>
+  <div>
+    <p>Floor Count:</p><%= f.number_field :floor_count %>
+  </div>
+  <div>
+   <p>Floor Area:</p> <%= f.number_field :floor_area %>
+  </div>
+  <%= f.submit "Save Library"%>
+<% end %>
